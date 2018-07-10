@@ -1,0 +1,38 @@
+{
+    "model" : {
+        "backend":              "Full Yolo",
+        "input_size":           493,
+        "anchors":              [3.50,3.36, 4.76,1.32, 5.04,1.74, 5.73,1.49, 6.24,1.86],
+
+
+        "max_box_per_image":    10,        
+        "labels":               ["Plate"]
+    },
+
+    "train": {
+        "train_image_folder":   "/home/ubuntu/Documents/Licence_Plate_Detection/keras-yolo2-master/image1/",
+        "train_annot_folder":   "/home/ubuntu/Documents/Licence_Plate_Detection/keras-yolo2-master/annot1/",     
+          
+        "train_times":          8,
+        "pretrained_weights":   "",
+        "batch_size":           4,
+        "learning_rate":        1e-4,
+        "nb_epochs":            1,
+        "warmup_epochs":        3,
+
+        "object_scale":         5.0 ,
+        "no_object_scale":      1.0,
+        "coord_scale":          1.0,
+        "class_scale":          1.0,
+
+        "saved_weights_name":   "full_yolo_plate.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":   "/home/ubuntu/Documents/Licence Plate Detection/keras-yolo2-master/valid_image_folder/",
+        "valid_annot_folder":   "/home/ubuntu/Documents/Licence Plate Detection/keras-yolo2-master/valid_annot_folder/",
+
+        "valid_times":          1
+    }
+}
